@@ -29,7 +29,7 @@
 Print Barcode label for products
 for purchase order.
     """,
-    'author': 'CYSFuturo S.A.',
+    'author': 'Designcomplex',
     'images': [
     ],
     'depends': ['product', 'purchase'],
@@ -46,7 +46,7 @@ for purchase order.
     'installable': True,
     'application': True,
     #'qweb': ['static/src/xml/pos.xml'],
-    'website': 'https://www.cysfuturo.com',
+    'website': 'http://www.designcomplex.de',
     'auto_install': False,
 }
 
