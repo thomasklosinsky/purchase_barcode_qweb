@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<openerp>
+    <data>
+
+        <report
+            id="purchase_barcode_qweb"
+            string="Product Barcode"
+            model="purchase.order"
+            report_type="qweb-pdf"
+            name="purchase_barcode_qweb.report_purchase_barcode"
+            file="purchase_barcode_qweb.report_purchase_barcode"
+            menu="False"
+         />
+
+
+        <record id="purchase_barcode_qweb" model="ir.actions.report.xml">
+            <field name="paperformat_id" ref="purchase_barcode_qweb.paperformat_barcode_label_purchase"/>
+        </record>
+
+    </data>
+</openerp>

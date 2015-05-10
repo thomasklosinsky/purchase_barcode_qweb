@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="action_report_purchase_product_barcode_print" model="ir.actions.act_window">
+            <field name="name">Product Barcodes Drucken</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">purchase.product.barcode.print</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="view_purchase_product_barcode_print" model="ir.ui.view">
+            <field name="name">purchase_product_barcode_print</field>
+            <field name="model">purchase.product.barcode.print</field>
+            <field name="arch" type="xml">
+                <form string="Product barcode print">
+                    <field name="product_ids" readonly="1">
+                        <tree>
+                            <field name="product_id"/>
+                            <field name="qty"/>
+                        </tree>
+                    </field>
+                    <footer>
+                        <button name="print_report" type="object" string="Print Report" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+
+        <act_window
+	        id="act_purchase_product_label"
+	        name="Print Label"
+	        view_mode = "form"
+	        res_model="purchase.product.barcode.print"
+	        src_model="purchase.order"
+	        target="new"/>
+
+
+    </data>
+</openerp>
