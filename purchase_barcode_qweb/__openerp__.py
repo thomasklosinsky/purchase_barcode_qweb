@@ -32,7 +32,7 @@ for purchase order.
     'author': 'Designcomplex',
     'images': [
     ],
-    'depends': ['product', 'purchase'],
+    'depends': ['product', 'purchase', 'product_brand'],
     'data': [
         'wizard/purchase_product_barcode_print.xml',
         'views/report_paperformat.xml',
