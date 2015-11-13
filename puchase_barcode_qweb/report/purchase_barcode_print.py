@@ -46,7 +46,8 @@ class purchase_barcode_print(report_sxw.rml_parse):
             product_id = product['product_id']
             if not product_id:
                 continue
-            product_read = product_obj.read(self.cr, self.uid, [product_id], ['name', 'default_code', 'list_price'])[0]
+            product_read = product_obj.read(self.cr, self.uid, [product_id],
+                                            ['name', 'default_code', 'list_price', 'product_kunstler_id','product_type_id'])[0]
             qty = product['qty']
             for product_row in range(int(math.ceil(float(qty)/1))):
                 label_row=[]
@@ -55,6 +56,8 @@ class purchase_barcode_print(report_sxw.rml_parse):
                         'name': product_read['name'],
                         'default_code': product_read['default_code'],
                         'price': product_read['list_price'],
+                        'brand': product_read['product_kunstler_id'] and product_read['product_kunstler_id'][1],
+                        'type': product_read['product_type_id'] and product_read['product_type_id'][1],
                     }
                     label_row.append(label_data)
                 result_data.append(label_row)
