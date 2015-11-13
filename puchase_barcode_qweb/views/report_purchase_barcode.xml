@@ -4,11 +4,11 @@
 <template id="report_purchase_barcode">
     <t t-name="purchase_barcode_qweb.report_purchase_barcode">
                 <div class="page" style="margin-left: -3mm;">
-                    <table style="font-size:10.0px;" cellspacing="0">
+                    <table style="font-size:9.0px;" cellspacing="0">
                         <tr style="height: 19mm" t-foreach="getLabelRows(data,context)" t-as="label_row">
                             <td align="center" style="width: 78mm;padding: 0mm 0mm 0mm 0mm;" t-foreach="label_row" t-as="label_data">
-                                <span style="font-size:12.0px;" t-esc="label_data['name']"/><br/>
-                                <span style="font-size:14.0px; font-weight:bold;" t-esc="formatLang(label_data['price'], currency_obj = res_company.currency_id)"/><br/>
+                                <span style="font-size:10.0px;" t-esc="label_data['name']"/><br/>
+                                <span style="font-size:12.0px; font-weight:bold;" t-esc="formatLang(label_data['price'], currency_obj = res_company.currency_id)"/><br/>
                                 <span>
                                    <img style="width: 30mm;height: 8mm;" t-att-src="'data:image/png;base64,'+generateBarcode(label_data['default_code'])"/>
                                 </span>
