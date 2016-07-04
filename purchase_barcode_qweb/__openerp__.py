@@ -24,6 +24,9 @@
     'version': '1.0.1',
     'category': 'Barcode',
     'sequence': 6,
+    'price': 9.00,
+    'license': 'LGPL-3',
+    'currency': 'EUR',
     'summary': 'Barcode label for products in Purchase Order',
     'description': """
 Print Barcode label for products
