@@ -35,7 +35,7 @@ for purchase order.
     'author': 'Designcomplex',
     'images': [
     ],
-    'depends': ['product', 'purchase', 'product_brand'],
+    'depends': ['product', 'purchase'],
     'data': [
         'wizard/purchase_product_barcode_print.xml',
         'views/report_paperformat.xml',
